@@ -44,3 +44,15 @@ def about(request):
             'year':datetime.now().year,
         }
     )
+
+def books(request):
+    """First quick-n-dirty render of links to Blurb books"""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request, 
+        'app/books.html',
+        {
+            'title':'Books',
+            'year':datetime.now().year,
+        }
+    )
